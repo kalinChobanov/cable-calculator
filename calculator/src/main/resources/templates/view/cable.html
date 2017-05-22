@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="~{fragments/head :: cars-head}" th:with="pageTitle='Cars'">
+		<title>Request</title>
+
+	</head>
+	<body>
+		<nav th:replace="~{fragments/navigation :: navigation}"></nav>
+
+		<div class="jumbotron background-lightBlue">
+			<div class="container text-center">
+				<h1>Кабели</h1>
+			</div>
+		</div>
+
+		<div class="container col-md-1 col-md-offset-6">
+			<div class="form-row">
+				<button type="button" class="btn btn-info"  data-toggle="modal" data-target="#cabelModal">Добави нов кабел</button>
+			</div>
+		</div>
+
+		<div class="container col-md-5 col-md-offset-3">
+
+			<table class="table table-hover" >
+				<thead class="text-lightBlue">
+					<tr>
+						<th>№</th>
+						<th>Име</th>
+						<th>Сноп</th>
+						<th>Бр. жила</th>
+					</tr>
+				</thead>
+
+				<tbody id="cableTableBody"></tbody>
+			</table>
+		</div>
+
+		<!-- Modal -->
+		<div id="cabelModal" class="modal  modal-small fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header text-lightBlue text-center">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h3 class="modal-title">Добави нов кабел</h3>
+					</div>
+
+					<form class="form" method="post"  id="cableForm" th:object="${cable}">
+						<div class="modal-body">
+							<div class="form-group">
+								<input type="text" class="form-control" id="cableName" th:field="*{name}" placeholder="Име на кабел" />
+							</div>
+
+							<div class="form-group" id="divConductor">
+								<input type="text" class="form-control"  id="conductorName" th:field="*{conductorName}" placeholder="Вид жило" />
+							</div>
+
+							<div class="form-group">
+								<select class="form-control" id="numberOfConductors" th:field="*{numberOfConductors}">
+									<option value="10">Брой Жила</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-info">Създай кабел</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+		<span  th:replace="~{fragments/scripts :: scripts}"></span>
+		<script src="../static/js/cable.js" th:src="@{js/cable.js}"></script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Modal</title>
+	</head>
+	<body>
+		<!-- Modal -->
+		<div class="modal fade"  role="dialog" id="modal_create_request" th:fragment="modal-create-request">
+			<div class="modal-dialog ">
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						<h2 class="modal-title h2">Избери кабел</h2>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3">
+								<table class="table table-hover">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Име</th>
+										</tr>
+									</thead>
+									<tbody id="create_request_tbody"></tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+body{
+	/*	padding-top: 70px;*/
+}
+textarea {
+	resize: none;
+	width: 70px;
+	height: 33px;
+	padding-left: 10px;
+	padding-top: 7px;
+}
+
+
+/* Important part */
+.modal-dialog{
+    overflow-y: initial !important
+}
+
+.ui-menu .ui-menu-item a{
+    color: #96f226;
+    border-radius: 0px;
+    border: 1px solid #454545;
+}
+.ui-menu-item-wrapper{
+	background-color: white;
+}
+
+#pdf {
+
+	width: 800px;
+	height: 580px;
+}
+#pdfContentModal {
+	width: 820px;
+}
+
+.modal-small  {
+    width: 50%; /* respsonsive width */
+    margin-left: 25%; /* width/2) */ 
+}
+
+.text-lightBlue{
+	color: #34AFD4;
+}
+
+.text-darkBlue{
+	color: #0e708d;
+}
+
+.background-lightBlue{
+	background-color: #30bfea;
+	color: white;
+}
+
+.bg-gray{
+	background-color: #424E5A;
+	color: #ffffff;
+}
+
+.jambotron{
+	height: 60px;
+}
+
+.ui-autocomplete {
+	max-height: 150px;
+	overflow-y: auto;
+	/* prevent horizontal scrollbar */
+	overflow-x: hidden;
+	/* add padding to account for vertical scrollbar */
+	padding-right: 20px;
+} 
+
+.container{
+	margin-bottom: 15px;
+}
